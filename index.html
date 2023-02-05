@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="h-25 shadow-sm d-flex justify-content-evenly bg-secondary-subtle text-center" >
+        <h4 class=" text-success fw-bolder  py-4 px-5 fst-italic">good Notes</h4>
+        <button class="btn btn-outline-success m-auto w-25" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+       Add Notes
+      </button>
+      <input class="form-control py-2 mt-4 w-25 m-auto mb-4" placeholder=" search by name........."  oninput="searchnotes(this.value)" type="search" name="search" id="search">
+    </header>
+<div class="container text-center mt-5">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add Notes</h5>
+        <button type="button" class="btn-close rounded-circle bg-success  text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+
+        <label for="tilte">Title</label>
+        <input type="text" id="title" class="form-control mt-1 mb-1 " placeholder="Enter Title">
+
+        <label for="disc">Descreption</label>
+        <input type="text" id="disc" class="form-control mt-1 mb-1 " placeholder="Enter discreption">
+
+        <button id="deleteBtn" class=" btn btn-outline-success d-block w-100 mt-2 " onclick="addnotes()" >Add Notes</button>
+        <button id="updateBtn" class=" btn btn-outline-warning d-none w-100 mt-2 " onclick="updatenotes(i)" >Update Notes</button>
+        </div>
+      </div>
+</div>
+<!-- end-offcanvas -->
+<div id="notes" class="row w-100 m-auto gy-3  p-3">
+
+
+
+
+
+
+
+
+</div>
+
+
+    <script src="js/bootstrap.bundle.js" ></script>
+    <script src="js/index.js" ></script>
+</body>
+</html>
